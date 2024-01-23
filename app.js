@@ -20,7 +20,7 @@ const start = async () => {
       console.log(`Server is listening on port ${port}...`);
     });
   } catch (error) {
-    console.log(`The server could not be loaded ${error}`);
+    console.log(`Our server could not be loaded ${error}`);
   }
 };
 
