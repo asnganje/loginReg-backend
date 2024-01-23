@@ -1,0 +1,6 @@
+services:
+  - name: loginRegisterBackend
+    type: web
+    envVarsFile: .env
+    buildCommand: npm install
+    startCommand: npm start
