@@ -15,11 +15,12 @@ const url = process.env.MONGO_URI
 const start = async () => {
   try {
     await connectDB(url)
+    console.log("MongoDB connected successfully!");
     app.listen(port, () => {
       console.log(`Server is listening on port ${port}...`);
     });
   } catch (error) {
-    console.log("The server could not be loaded");
+    console.log(`The server could not be loaded ${error}`);
   }
 };
 
