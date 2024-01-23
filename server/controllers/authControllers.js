@@ -17,8 +17,10 @@ const register = async (req, res) => {
 }
 
 const login = async (req, res) => {
+    const {email, password} = req.body;
     try {
-        const user = await User.findOne({email: req.body.email})
+        const user = await User.findOne({email})
+        await user.comparePass(password)
         res.status(200).json({
             status: 'success',
             msg: user
